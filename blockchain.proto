@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+message Transaction {
+    bytes sender = 1;
+    string recipient = 2;
+    uint32 nonce = 3;
+
+    uint32 amount = 4;
+    uint32 gas = 5;
+    int64 timestamp = 6;
+
+    bytes r = 7;
+    bytes s = 8;
+}
+
+message Block {
+    uint64 index = 1;
+    uint64 timestamp = 2;
+    bytes prevHash = 3;
+    string miner = 4;
+
+    repeated Transaction transactions = 5;
+}
+
+message AccountState {
+    uint32 balance = 1;
+    uint32 nonce = 2;
+}
