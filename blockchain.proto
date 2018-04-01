@@ -6,8 +6,8 @@ message Transaction {
     uint32 nonce = 3;
 
     uint32 amount = 4;
-    uint32 gas = 5;
-    int64 timestamp = 6;
+    uint64 gas = 5;
+    uint64 timestamp = 6;
 
     bytes r = 7;
     bytes s = 8;
@@ -23,6 +23,6 @@ message Block {
 }
 
 message AccountState {
-    uint32 balance = 1;
+    uint64 balance = 1;
     uint32 nonce = 2;
 }
