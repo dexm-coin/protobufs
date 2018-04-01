@@ -5,8 +5,8 @@ message Transaction {
     string recipient = 2;
     uint32 nonce = 3;
 
-    uint32 amount = 4;
-    uint64 gas = 5;
+    uint64 amount = 4;
+    uint32 gas = 5;
     uint64 timestamp = 6;
 
     bytes r = 7;
