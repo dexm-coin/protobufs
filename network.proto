@@ -12,10 +12,11 @@ message Request {
     MessageTypes type = 1;
 }
 
-message Event {
-    enum EventTypes {
-        NEW_BLOCK = 0;
-    }
+message Envelope {
+  enum ContentType {
+    REQUEST = 0;
+  }
 
-    EventTypes type = 0;
+  ContentType type = 1;
+  bytes data = 2;
 }
