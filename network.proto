@@ -15,6 +15,7 @@ message Request {
 message Envelope {
   enum ContentType {
     REQUEST = 0;
+    OTHER = 1;
   }
 
   ContentType type = 1;
