@@ -5,8 +5,8 @@ message Request {
         GET_BLOCKCHAIN_LEN = 0;
         GET_BLOCK = 1;
         GET_PEERS = 2;
-        GET_BLOOM_MSGS = 3;
-        GET_PING = 4;
+        GET_IDENTITY = 3;
+        KEY_EXCHANGE = 4;
     }
 
     MessageTypes type = 1;
@@ -16,8 +16,16 @@ message Envelope {
   enum ContentType {
     REQUEST = 0;
     OTHER = 1;
+    BROADCAST  = 2;
   }
 
   ContentType type = 1;
   bytes data = 2;
+}
+
+message Identity {
+  bytes pubkey = 1;
+
+  bytes r = 2;
+  bytes s = 3;
 }
