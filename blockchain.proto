@@ -22,6 +22,10 @@ message Block {
     repeated Transaction transactions = 5;
 }
 
+message Index {
+    repeated Block blocks = 1;
+}
+
 message AccountState {
     uint64 balance = 1;
     uint32 nonce = 2;

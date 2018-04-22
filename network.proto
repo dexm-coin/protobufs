@@ -6,7 +6,6 @@ message Request {
         GET_BLOCK = 1;
         GET_PEERS = 2;
         GET_IDENTITY = 3;
-        KEY_EXCHANGE = 4;
     }
 
     MessageTypes type = 1;
@@ -23,9 +22,24 @@ message Envelope {
   bytes data = 2;
 }
 
+message Broadcast {
+  enum BroadcastType {
+    TRANSACTION = 0;
+    BLOCK_PROPOSAL = 1;
+    CHECKPOINT_VOTE = 2;
+  }
+
+  BroadcastType type = 1;
+  bytes data = 2;
+  Identity identity = 3;
+}
+
+
 message Identity {
   bytes pubkey = 1;
 
   bytes r = 2;
   bytes s = 3;
+
+  bytes data = 4;
 }
