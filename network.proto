@@ -5,7 +5,7 @@ message Request {
         GET_BLOCKCHAIN_LEN = 0;
         GET_BLOCK = 1;
         GET_PEERS = 2;
-        GET_IDENTITY = 3;
+        GET_CHAIN_SEGMENT = 4;
     }
 
     MessageTypes type = 1;
@@ -31,15 +31,19 @@ message Broadcast {
 
   BroadcastType type = 1;
   bytes data = 2;
-  Identity identity = 3;
+  Signature identity = 3;
 }
 
 
-message Identity {
+message Signature {
   bytes pubkey = 1;
 
   bytes r = 2;
   bytes s = 3;
 
   bytes data = 4;
+}
+
+message Peers {
+    repeated string ip = 1;
 }
