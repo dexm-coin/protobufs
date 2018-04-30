@@ -198,6 +198,7 @@ type CasperVote struct {
 	TargetHeight uint64 `protobuf:"varint,4,opt,name=targetHeight" json:"targetHeight,omitempty"`
 	R            []byte `protobuf:"bytes,5,opt,name=r,proto3" json:"r,omitempty"`
 	S            []byte `protobuf:"bytes,6,opt,name=s,proto3" json:"s,omitempty"`
+	PublicKey    []byte `protobuf:"bytes,7,opt,name=publicKey,proto3" json:"publicKey,omitempty"`
 }
 
 func (m *CasperVote) Reset()                    { *m = CasperVote{} }
@@ -243,6 +244,13 @@ func (m *CasperVote) GetR() []byte {
 func (m *CasperVote) GetS() []byte {
 	if m != nil {
 		return m.S
+	}
+	return nil
+}
+
+func (m *CasperVote) GetPublicKey() []byte {
+	if m != nil {
+		return m.PublicKey
 	}
 	return nil
 }
