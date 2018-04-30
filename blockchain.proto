@@ -40,4 +40,6 @@ message CasperVote {
 
     bytes r = 5;
     bytes s = 6;
+
+    bytes publicKey = 7;
 }
