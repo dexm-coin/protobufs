@@ -5,10 +5,10 @@ message Request {
         GET_BLOCKCHAIN_LEN = 0;
         GET_BLOCK = 1;
         GET_PEERS = 2;
-        GET_CHAIN_SEGMENT = 4;
     }
 
     MessageTypes type = 1;
+    uint64 index = 2;
 }
 
 message Envelope {

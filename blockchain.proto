@@ -30,3 +30,14 @@ message AccountState {
     uint64 balance = 1;
     uint32 nonce = 2;
 }
+
+message CasperVote {
+    bytes source = 1;
+    bytes target = 2;
+
+    uint64 sourceHeight = 3;
+    uint64 targetHeight = 4;
+
+    bytes r = 5;
+    bytes s = 6;
+}
