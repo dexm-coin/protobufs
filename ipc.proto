@@ -12,11 +12,11 @@ message IPCEnvelope {
         APPEND = 7;           // Append a value to a key, set it if it's empty
     }
 
-    MsgType type = 0;
-    bytes data = 1;
+    MsgType type = 1;
+    bytes data = 2;
 }
 
 message Append {
-    bytes key = 0;
-    bytes value = 1; 
+    bytes key = 1;
+    bytes value = 2; 
 }
