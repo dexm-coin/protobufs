@@ -155,6 +155,7 @@ type Broadcast struct {
 	Type     Broadcast_BroadcastType `protobuf:"varint,1,opt,name=type,enum=Broadcast_BroadcastType" json:"type,omitempty"`
 	Data     []byte                  `protobuf:"bytes,2,opt,name=data,proto3" json:"data,omitempty"`
 	Identity *Signature              `protobuf:"bytes,3,opt,name=identity" json:"identity,omitempty"`
+	TTL      int32                   `protobuf:"varint,4,opt,name=ttl" json:"ttl,omitempty"`
 }
 
 func (m *Broadcast) Reset()                    { *m = Broadcast{} }
@@ -181,6 +182,13 @@ func (m *Broadcast) GetIdentity() *Signature {
 		return m.Identity
 	}
 	return nil
+}
+
+func (m *Broadcast) GetTTL() int32 {
+	if m != nil {
+		return m.TTL
+	}
+	return -1
 }
 
 type Signature struct {
