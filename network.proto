@@ -32,6 +32,7 @@ message Broadcast {
   BroadcastType type = 1;
   bytes data = 2;
   Signature identity = 3;
+  uint32 TTL = 4;
 }
 
 
