@@ -9,8 +9,13 @@ message Transaction {
     uint32 gas = 5;
     uint64 timestamp = 6;
 
-    bytes r = 7;
-    bytes s = 8;
+    bool contractCreation = 7;
+    string function = 8;
+    repeated uint64 args = 9;
+    bytes data = 10;
+    
+    bytes r = 11;
+    bytes s = 12;
 }
 
 message Block {
@@ -29,6 +34,11 @@ message Index {
 message AccountState {
     uint64 balance = 1;
     uint32 nonce = 2;
+}
+
+message ContractState {
+    bytes memory = 1;
+    repeated uint64 globals = 2;
 }
 
 message CasperVote {
