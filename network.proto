@@ -5,11 +5,12 @@ message Request {
         GET_BLOCKCHAIN_LEN = 0;
         GET_BLOCK = 1;
         GET_PEERS = 2;
+        GET_WALLET_STATUS = 3;
+        GET_VERSION = 4;
     }
 
     MessageTypes type = 1;
     uint64 index = 2;
-    string orcoddio = 3;
 }
 
 message Envelope {
