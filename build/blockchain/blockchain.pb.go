@@ -345,13 +345,13 @@ func (m *ContractState) GetGlobals() []uint64 {
 }
 
 type CasperVote struct {
-	Source               []byte   `protobuf:"bytes,1,opt,name=source,proto3" json:"source,omitempty"`
-	Target               []byte   `protobuf:"bytes,2,opt,name=target,proto3" json:"target,omitempty"`
+	Source               string   `protobuf:"bytes,1,opt,name=source,proto3" json:"source,omitempty"`
+	Target               string   `protobuf:"bytes,2,opt,name=target,proto3" json:"target,omitempty"`
 	SourceHeight         uint64   `protobuf:"varint,3,opt,name=sourceHeight,proto3" json:"sourceHeight,omitempty"`
 	TargetHeight         uint64   `protobuf:"varint,4,opt,name=targetHeight,proto3" json:"targetHeight,omitempty"`
 	R                    []byte   `protobuf:"bytes,5,opt,name=r,proto3" json:"r,omitempty"`
 	S                    []byte   `protobuf:"bytes,6,opt,name=s,proto3" json:"s,omitempty"`
-	PublicKey            []byte   `protobuf:"bytes,7,opt,name=publicKey,proto3" json:"publicKey,omitempty"`
+	PublicKey            string   `protobuf:"bytes,7,opt,name=publicKey,proto3" json:"publicKey,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -381,18 +381,18 @@ func (m *CasperVote) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_CasperVote proto.InternalMessageInfo
 
-func (m *CasperVote) GetSource() []byte {
+func (m *CasperVote) GetSource() string {
 	if m != nil {
 		return m.Source
 	}
-	return nil
+	return ""
 }
 
-func (m *CasperVote) GetTarget() []byte {
+func (m *CasperVote) GetTarget() string {
 	if m != nil {
 		return m.Target
 	}
-	return nil
+	return ""
 }
 
 func (m *CasperVote) GetSourceHeight() uint64 {
@@ -423,11 +423,11 @@ func (m *CasperVote) GetS() []byte {
 	return nil
 }
 
-func (m *CasperVote) GetPublicKey() []byte {
+func (m *CasperVote) GetPublicKey() string {
 	if m != nil {
 		return m.PublicKey
 	}
-	return nil
+	return ""
 }
 
 func init() {
