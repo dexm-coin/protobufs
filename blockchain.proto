@@ -42,8 +42,8 @@ message ContractState {
 }
 
 message CasperVote {
-    string source = 1;
-    string target = 2;
+    bytes source = 1;
+    bytes target = 2;
 
     uint64 sourceHeight = 3;
     uint64 targetHeight = 4;
