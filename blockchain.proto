@@ -53,3 +53,7 @@ message CasperVote {
 
     string publicKey = 7;
 }
+
+message ValidatorWithdraw {
+    string publicKey = 7;
+}

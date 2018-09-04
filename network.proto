@@ -29,6 +29,8 @@ message Broadcast {
     TRANSACTION = 0;
     BLOCK_PROPOSAL = 1;
     CHECKPOINT_VOTE = 2;
+    NEW_CONTRACT = 3;
+    WITHDRAW = 4;
   }
 
   BroadcastType type = 1;

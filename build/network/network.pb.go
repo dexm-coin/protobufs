@@ -83,6 +83,7 @@ const (
 	Broadcast_BLOCK_PROPOSAL  Broadcast_BroadcastType = 1
 	Broadcast_CHECKPOINT_VOTE Broadcast_BroadcastType = 2
 	Broadcast_NEW_CONTRACT    Broadcast_BroadcastType = 3
+	Broadcast_WITHDRAW        Broadcast_BroadcastType = 4
 )
 
 var Broadcast_BroadcastType_name = map[int32]string{
@@ -90,12 +91,14 @@ var Broadcast_BroadcastType_name = map[int32]string{
 	1: "BLOCK_PROPOSAL",
 	2: "CHECKPOINT_VOTE",
 	3: "NEW_CONTRACT",
+	4: "WITHDRAW",
 }
 var Broadcast_BroadcastType_value = map[string]int32{
 	"TRANSACTION":     0,
 	"BLOCK_PROPOSAL":  1,
 	"CHECKPOINT_VOTE": 2,
 	"NEW_CONTRACT":    3,
+	"WITHDRAW":        4,
 }
 
 func (x Broadcast_BroadcastType) String() string {

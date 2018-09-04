@@ -430,6 +430,44 @@ func (m *CasperVote) GetPublicKey() string {
 	return ""
 }
 
+type ValidatorWithdraw struct {
+	PublicKey            string   `protobuf:"bytes,1,opt,name=publicKey,proto3" json:"publicKey,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (v *ValidatorWithdraw) Reset()         { *v = ValidatorWithdraw{} }
+func (v *ValidatorWithdraw) String() string { return proto.CompactTextString(v) }
+func (*ValidatorWithdraw) ProtoMessage()    {}
+func (*ValidatorWithdraw) Descriptor() ([]byte, []int) {
+	return fileDescriptor_blockchain_ac7a21bdb2afe16f, []int{6}
+}
+func (v *ValidatorWithdraw) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_CasperVote.Unmarshal(v, b)
+}
+func (v *ValidatorWithdraw) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_CasperVote.Marshal(b, v, deterministic)
+}
+func (dst *ValidatorWithdraw) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CasperVote.Merge(dst, src)
+}
+func (v *ValidatorWithdraw) XXX_Size() int {
+	return xxx_messageInfo_CasperVote.Size(v)
+}
+func (v *ValidatorWithdraw) XXX_DiscardUnknown() {
+	xxx_messageInfo_CasperVote.DiscardUnknown(v)
+}
+
+var xxx_messageInfo_ValidatorWithdraw proto.InternalMessageInfo
+
+func (v *ValidatorWithdraw) GetPublicKey() string {
+	if v != nil {
+		return v.PublicKey
+	}
+	return ""
+}
+
 func init() {
 	proto.RegisterType((*Transaction)(nil), "Transaction")
 	proto.RegisterType((*Block)(nil), "Block")
@@ -437,6 +475,7 @@ func init() {
 	proto.RegisterType((*AccountState)(nil), "AccountState")
 	proto.RegisterType((*ContractState)(nil), "ContractState")
 	proto.RegisterType((*CasperVote)(nil), "CasperVote")
+	proto.RegisterType((*ValidatorWithdraw)(nil), "ValidatorWithdraw")
 }
 
 func init() { proto.RegisterFile("blockchain.proto", fileDescriptor_blockchain_ac7a21bdb2afe16f) }
