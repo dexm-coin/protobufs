@@ -55,5 +55,8 @@ message CasperVote {
 }
 
 message ValidatorWithdraw {
-    string publicKey = 7;
+    string publicKey = 1;
+
+    bytes r = 2;
+    bytes s = 3;
 }

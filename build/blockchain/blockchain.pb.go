@@ -432,6 +432,8 @@ func (m *CasperVote) GetPublicKey() string {
 
 type ValidatorWithdraw struct {
 	PublicKey            string   `protobuf:"bytes,1,opt,name=publicKey,proto3" json:"publicKey,omitempty"`
+	R                    []byte   `protobuf:"bytes,2,opt,name=r,proto3" json:"r,omitempty"`
+	S                    []byte   `protobuf:"bytes,3,opt,name=s,proto3" json:"s,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -466,6 +468,20 @@ func (v *ValidatorWithdraw) GetPublicKey() string {
 		return v.PublicKey
 	}
 	return ""
+}
+
+func (v *ValidatorWithdraw) GetR() []byte {
+	if v != nil {
+		return v.R
+	}
+	return nil
+}
+
+func (v *ValidatorWithdraw) GetS() []byte {
+	if v != nil {
+		return v.S
+	}
+	return nil
 }
 
 func init() {
