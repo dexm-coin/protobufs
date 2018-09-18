@@ -50,5 +50,5 @@ message Signature {
 }
 
 message Peers {
-    repeated string ip = 1;
+  repeated string ip = 1;
 }

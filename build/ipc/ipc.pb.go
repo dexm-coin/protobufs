@@ -3,9 +3,11 @@
 
 package ipc
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
+import (
+	fmt "fmt"
+	proto "github.com/golang/protobuf/proto"
+	math "math"
+)
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
@@ -41,6 +43,7 @@ var IPCEnvelope_MsgType_name = map[int32]string{
 	6: "GET",
 	7: "APPEND",
 }
+
 var IPCEnvelope_MsgType_value = map[string]int32{
 	"GET_BLOCK_NUMBER": 0,
 	"GET_TS":           1,
@@ -55,8 +58,9 @@ var IPCEnvelope_MsgType_value = map[string]int32{
 func (x IPCEnvelope_MsgType) String() string {
 	return proto.EnumName(IPCEnvelope_MsgType_name, int32(x))
 }
+
 func (IPCEnvelope_MsgType) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_ipc_eb595023ab709481, []int{0, 0}
+	return fileDescriptor_6eb2dac662210585, []int{0, 0}
 }
 
 type IPCEnvelope struct {
@@ -71,16 +75,17 @@ func (m *IPCEnvelope) Reset()         { *m = IPCEnvelope{} }
 func (m *IPCEnvelope) String() string { return proto.CompactTextString(m) }
 func (*IPCEnvelope) ProtoMessage()    {}
 func (*IPCEnvelope) Descriptor() ([]byte, []int) {
-	return fileDescriptor_ipc_eb595023ab709481, []int{0}
+	return fileDescriptor_6eb2dac662210585, []int{0}
 }
+
 func (m *IPCEnvelope) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_IPCEnvelope.Unmarshal(m, b)
 }
 func (m *IPCEnvelope) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_IPCEnvelope.Marshal(b, m, deterministic)
 }
-func (dst *IPCEnvelope) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_IPCEnvelope.Merge(dst, src)
+func (m *IPCEnvelope) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_IPCEnvelope.Merge(m, src)
 }
 func (m *IPCEnvelope) XXX_Size() int {
 	return xxx_messageInfo_IPCEnvelope.Size(m)
@@ -117,16 +122,17 @@ func (m *Append) Reset()         { *m = Append{} }
 func (m *Append) String() string { return proto.CompactTextString(m) }
 func (*Append) ProtoMessage()    {}
 func (*Append) Descriptor() ([]byte, []int) {
-	return fileDescriptor_ipc_eb595023ab709481, []int{1}
+	return fileDescriptor_6eb2dac662210585, []int{1}
 }
+
 func (m *Append) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Append.Unmarshal(m, b)
 }
 func (m *Append) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Append.Marshal(b, m, deterministic)
 }
-func (dst *Append) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Append.Merge(dst, src)
+func (m *Append) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Append.Merge(m, src)
 }
 func (m *Append) XXX_Size() int {
 	return xxx_messageInfo_Append.Size(m)
@@ -157,9 +163,9 @@ func init() {
 	proto.RegisterEnum("IPCEnvelope_MsgType", IPCEnvelope_MsgType_name, IPCEnvelope_MsgType_value)
 }
 
-func init() { proto.RegisterFile("ipc.proto", fileDescriptor_ipc_eb595023ab709481) }
+func init() { proto.RegisterFile("ipc.proto", fileDescriptor_6eb2dac662210585) }
 
-var fileDescriptor_ipc_eb595023ab709481 = []byte{
+var fileDescriptor_6eb2dac662210585 = []byte{
 	// 240 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x4c, 0x90, 0x41, 0x4b, 0xc3, 0x40,
 	0x10, 0x85, 0xdd, 0x26, 0x4d, 0x70, 0x5a, 0xcb, 0x38, 0xe4, 0xd0, 0x63, 0xc9, 0x29, 0xa7, 0x20,

@@ -60,3 +60,9 @@ message ValidatorWithdraw {
     bytes r = 2;
     bytes s = 3;
 }
+
+message Receipt {
+    string sender = 1;
+    string recipient = 2;
+    uint64 amount = 3;
+}
