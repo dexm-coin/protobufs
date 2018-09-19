@@ -25,6 +25,9 @@ message Block {
     string miner = 4;
 
     repeated Transaction transactions = 5;
+
+    bytes merkleRootTransaction = 6;
+    bytes merkleRootReceipt = 7;
 }
 
 message Index {
