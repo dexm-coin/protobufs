@@ -31,11 +31,12 @@ message Block {
 }
 
 message MerkleRoot {
-    repeated bytes signedMerkleRootTransaction = 1;
-    repeated bytes signedMerkleRootReceipt = 2;
+    int64 shard = 1;
+    repeated bytes signedMerkleRootsTransaction = 2;
+    repeated bytes signedMerkleRootsReceipt = 3;
 
-    repeated string validators = 3;
-    repeated Transaction transactions = 4;
+    repeated string validators = 4;
+    repeated Transaction transactions = 5;
 }
 
 message AccountState {

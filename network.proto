@@ -1,17 +1,16 @@
 syntax = "proto3";
 
 message Request {
-    enum MessageTypes {
-        GET_BLOCKCHAIN_LEN = 0;
-        GET_BLOCK = 1;
-        GET_PEERS = 2;
-        GET_WALLET_STATUS = 3;
-        GET_VERSION = 4;
-    }
+  enum MessageTypes {
+      GET_BLOCKCHAIN_LEN = 0;
+      GET_BLOCK = 1;
+      GET_PEERS = 2;
+      GET_WALLET_STATUS = 3;
+      GET_VERSION = 4;
+  }
 
-    MessageTypes type = 1;
-    uint64 index = 2;
-    int64 shard = 3;
+  MessageTypes type = 1;
+  uint64 index = 2;
 }
 
 message Envelope {
@@ -23,6 +22,7 @@ message Envelope {
 
   ContentType type = 1;
   bytes data = 2;
+  int64 shard = 3;
 }
 
 message Broadcast {
@@ -32,6 +32,7 @@ message Broadcast {
     CHECKPOINT_VOTE = 2;
     NEW_CONTRACT = 3;
     WITHDRAW = 4;
+    MERKLE_ROOTS = 5;
   }
 
   BroadcastType type = 1;
