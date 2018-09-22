@@ -36,7 +36,6 @@ message MerkleRoot {
     repeated bytes signedMerkleRootsReceipt = 3;
 
     repeated string validators = 4;
-    repeated Transaction transactions = 5;
 }
 
 message AccountState {
