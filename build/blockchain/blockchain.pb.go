@@ -44,7 +44,6 @@ func (*Transaction) ProtoMessage()    {}
 func (*Transaction) Descriptor() ([]byte, []int) {
 	return fileDescriptor_e9ac6287ce250c9a, []int{0}
 }
-
 func (m *Transaction) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Transaction.Unmarshal(m, b)
 }
@@ -166,7 +165,6 @@ func (*Block) ProtoMessage()    {}
 func (*Block) Descriptor() ([]byte, []int) {
 	return fileDescriptor_e9ac6287ce250c9a, []int{1}
 }
-
 func (m *Block) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Block.Unmarshal(m, b)
 }
@@ -251,7 +249,6 @@ func (*MerkleRoot) ProtoMessage()    {}
 func (*MerkleRoot) Descriptor() ([]byte, []int) {
 	return fileDescriptor_e9ac6287ce250c9a, []int{2}
 }
-
 func (m *MerkleRoot) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MerkleRoot.Unmarshal(m, b)
 }
@@ -319,7 +316,6 @@ func (*AccountState) ProtoMessage()    {}
 func (*AccountState) Descriptor() ([]byte, []int) {
 	return fileDescriptor_e9ac6287ce250c9a, []int{3}
 }
-
 func (m *AccountState) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AccountState.Unmarshal(m, b)
 }
@@ -366,7 +362,6 @@ func (*ContractState) ProtoMessage()    {}
 func (*ContractState) Descriptor() ([]byte, []int) {
 	return fileDescriptor_e9ac6287ce250c9a, []int{4}
 }
-
 func (m *ContractState) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ContractState.Unmarshal(m, b)
 }
@@ -418,7 +413,6 @@ func (*CasperVote) ProtoMessage()    {}
 func (*CasperVote) Descriptor() ([]byte, []int) {
 	return fileDescriptor_e9ac6287ce250c9a, []int{5}
 }
-
 func (m *CasperVote) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CasperVote.Unmarshal(m, b)
 }
@@ -501,7 +495,6 @@ func (*ValidatorWithdraw) ProtoMessage()    {}
 func (*ValidatorWithdraw) Descriptor() ([]byte, []int) {
 	return fileDescriptor_e9ac6287ce250c9a, []int{6}
 }
-
 func (m *ValidatorWithdraw) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ValidatorWithdraw.Unmarshal(m, b)
 }
@@ -556,7 +549,6 @@ func (*Receipt) ProtoMessage()    {}
 func (*Receipt) Descriptor() ([]byte, []int) {
 	return fileDescriptor_e9ac6287ce250c9a, []int{7}
 }
-
 func (m *Receipt) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Receipt.Unmarshal(m, b)
 }
