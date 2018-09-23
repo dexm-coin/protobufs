@@ -32,10 +32,15 @@ message Block {
 
 message MerkleRoot {
     int64 shard = 1;
-    repeated bytes signedMerkleRootsTransaction = 2;
-    repeated bytes signedMerkleRootsReceipt = 3;
+    bytes signedMerkleRootsTransaction = 2;
+    bytes signedMerkleRootsReceipt = 3;
 
     repeated string validators = 4;
+}
+
+message Schnorr {
+    bytes r = 1;
+    string p = 2;
 }
 
 message AccountState {
