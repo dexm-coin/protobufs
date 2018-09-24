@@ -32,12 +32,17 @@ message Block {
 
 message MerkleRoot {
     int64 shard = 1;
-    bytes r_signedMerkleRootsTransaction = 2;
-    bytes s_signedMerkleRootsTransaction = 3;
-    bytes r_signedMerkleRootsReceipt = 4;
-    bytes s_signedMerkleRootsReceipt = 5;
 
-    repeated string validators = 6;
+    repeated bytes merkleRootsTransaction = 2;
+    repeated bytes merkleRootsReceipt = 3;
+
+    bytes r_signedMerkleRootsTransaction = 4;
+    bytes s_signedMerkleRootsTransaction = 5;
+    bytes r_signedMerkleRootsReceipt = 6;
+    bytes s_signedMerkleRootsReceipt = 7;
+    
+    repeated bytes r_validators = 8;
+    repeated string validators = 9;
 }
 
 message Schnorr {
