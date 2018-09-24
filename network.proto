@@ -33,6 +33,7 @@ message Broadcast {
     NEW_CONTRACT = 3;
     WITHDRAW = 4;
     MERKLE_ROOTS = 5;
+    SCHNORR = 6;
   }
 
   BroadcastType type = 1;
