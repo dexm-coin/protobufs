@@ -16,6 +16,8 @@ message Transaction {
     
     bytes r = 11;
     bytes s = 12;
+
+    bytes pubSchnorrKey = 13;
 }
 
 message Block {
@@ -30,7 +32,7 @@ message Block {
     bytes merkleRootReceipt = 7;
 }
 
-message MerkleRoot {
+message MerkleRootsSigned {
     int64 shard = 1;
 
     repeated bytes merkleRootsTransaction = 2;
@@ -43,6 +45,21 @@ message MerkleRoot {
     
     repeated bytes r_validators = 8;
     repeated string validators = 9;
+}
+
+message signSchnorr {
+    int64 shard = 1;
+
+    string wallet = 2;
+
+    bytes rSchnorr = 3;
+    bytes pSchnorr = 4;
+
+    bytes signTransaction = 5;
+    bytes signReceipt = 6;
+
+    string messageSignTransaction = 7;
+    string messageSignReceipt = 8;
 }
 
 message Schnorr {

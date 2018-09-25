@@ -34,8 +34,9 @@ message Broadcast {
     CHECKPOINT_VOTE = 2;
     NEW_CONTRACT = 3;
     WITHDRAW = 4;
-    MERKLE_ROOTS = 5;
+    MERKLE_ROOTS_SIGNED = 5;
     SCHNORR = 6;
+    SIGN_SCHNORR = 7;
   }
 
   BroadcastType type = 1;
