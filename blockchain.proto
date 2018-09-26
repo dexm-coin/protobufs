@@ -35,8 +35,8 @@ message Block {
 message MerkleRootsSigned {
     int64 shard = 1;
 
-    repeated bytes merkleRootsTransaction = 2;
-    repeated bytes merkleRootsReceipt = 3;
+    repeated string merkleRootsTransaction = 2;
+    repeated string merkleRootsReceipt = 3;
 
     bytes r_signedMerkleRootsTransaction = 4;
     bytes s_signedMerkleRootsTransaction = 5;
@@ -44,7 +44,7 @@ message MerkleRootsSigned {
     bytes s_signedMerkleRootsReceipt = 7;
     
     repeated bytes r_validators = 8;
-    repeated string validators = 9;
+    repeated bytes p_validators = 9;
 }
 
 message signSchnorr {
