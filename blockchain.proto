@@ -101,4 +101,11 @@ message Receipt {
     string sender = 1;
     string recipient = 2;
     uint64 amount = 3;
+    uint32 nonce = 4;
+}
+
+message MerkleTree {
+    bytes merkleRoot = 1;
+    repeated bytes hashes = 2;
+    repeated bool leafs = 3;
 }
