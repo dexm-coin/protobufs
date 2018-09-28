@@ -110,4 +110,6 @@ message MerkleProof {
 
     bytes root = 3;
     bytes leaf = 4;
+
+    Transaction transaction = 5;
 }
