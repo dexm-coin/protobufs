@@ -37,6 +37,7 @@ message Broadcast {
     MERKLE_ROOTS_SIGNED = 5;
     SCHNORR = 6;
     SIGN_SCHNORR = 7;
+    MERKLE_PROOF = 8;
   }
 
   BroadcastType type = 1;
