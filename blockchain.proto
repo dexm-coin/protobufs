@@ -104,8 +104,10 @@ message Receipt {
     uint32 nonce = 4;
 }
 
-message MerkleTree {
-    bytes merkleRoot = 1;
-    repeated bytes hashes = 2;
-    repeated bool leafs = 3;
+message MerkleProof {
+    repeated string mapLeaf = 1;
+    repeated bytes mapHash = 2;
+
+    bytes root = 3;
+    bytes leaf = 4;
 }
