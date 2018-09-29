@@ -24,7 +24,7 @@ message Envelope {
 
   ContentType type = 1;
   bytes data = 2;
-  int64 shard = 3;
+  uint32 shard = 3;
 }
 
 message Broadcast {
