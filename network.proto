@@ -9,6 +9,7 @@ message Request {
     GET_VERSION = 4;
     GET_CONTRACT_CODE = 5;
     GET_CONTRACT_STATE = 6;
+    GET_INTERESTS = 7;
   }
 
   MessageTypes type = 1;
