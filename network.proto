@@ -57,6 +57,10 @@ message Signature {
   bytes data = 4;
 }
 
+message Interests {
+  repeated string keys = 1;
+}
+
 message Peers {
   repeated string ip = 1;
 }
