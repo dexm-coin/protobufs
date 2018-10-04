@@ -66,3 +66,8 @@ message Interests {
 message Peers {
   repeated string ip = 1;
 }
+
+message PeersAndInterests {
+  repeated string keys = 1;
+  repeated string ips = 2;
+}
