@@ -76,6 +76,8 @@ message AccountState {
 message ContractState {
     bytes memory = 1;
     repeated uint64 globals = 2;
+    bool locked = 3;
+    bytes allowedWallet = 4;
 }
 
 message CasperVote {
