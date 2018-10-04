@@ -9,6 +9,7 @@ message Request {
     GET_VERSION = 4;
     GET_CONTRACT_CODE = 5;
     GET_CONTRACT_STATE = 6;
+    GET_INTERESTS = 7;
   }
 
   MessageTypes type = 1;
@@ -21,6 +22,7 @@ message Envelope {
     OTHER = 1;
     REQUEST  = 2;
     INTERESTS = 3;
+    NEIGHBOUR_INTERESTS = 4;
   }
 
   ContentType type = 1;
@@ -63,4 +65,9 @@ message Interests {
 
 message Peers {
   repeated string ip = 1;
+}
+
+message PeersAndInterests {
+  repeated string keys = 1;
+  repeated string ips = 2;
 }
