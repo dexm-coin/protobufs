@@ -29,25 +29,21 @@ message Block {
 
     repeated Transaction transactions = 5;
 
-    bytes merkleRootTransaction = 6;
-    bytes merkleRootReceipt = 7;
+    bytes merkleRootReceipt = 6;
 
-    uint32 shard = 8;
+    uint32 shard = 7;
 }
 
 message MerkleRootsSigned {
     uint32 shard = 1;
 
-    repeated bytes merkleRootsTransaction = 2;
-    repeated bytes merkleRootsReceipt = 3;
+    repeated bytes merkleRootsReceipt = 2;
 
-    bytes r_signedMerkleRootsTransaction = 4;
-    bytes s_signedMerkleRootsTransaction = 5;
-    bytes r_signedMerkleRootsReceipt = 6;
-    bytes s_signedMerkleRootsReceipt = 7;
+    bytes r_signedMerkleRootsReceipt = 3;
+    bytes s_signedMerkleRootsReceipt = 4;
     
-    repeated bytes r_validators = 8;
-    repeated bytes p_validators = 9;
+    repeated bytes r_validators = 5;
+    repeated bytes p_validators = 6;
 }
 
 message signSchnorr {
@@ -56,11 +52,8 @@ message signSchnorr {
     bytes rSchnorr = 2;
     bytes pSchnorr = 3;
 
-    bytes signTransaction = 4;
-    bytes signReceipt = 5;
-
-    bytes messageSignTransaction = 6;
-    bytes messageSignReceipt = 7;
+    bytes signReceipt = 4;
+    bytes messageSignReceipt = 5;
 }
 
 message Schnorr {
@@ -114,7 +107,8 @@ message MerkleProof {
     bytes root = 3;
     bytes leaf = 4;
 
-    Transaction transaction = 5;
+    Receipt receipt = 5;
+    Transaction transaction = 6;
 }
 
 message MoneyWithdraw {
