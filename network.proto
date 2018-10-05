@@ -41,6 +41,7 @@ message Broadcast {
     SCHNORR = 6;
     SIGN_SCHNORR = 7;
     MERKLE_PROOF = 8;
+    MONEY_WITHDRAW = 9;
   }
 
   BroadcastType type = 1;

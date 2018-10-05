@@ -116,3 +116,7 @@ message MerkleProof {
 
     Transaction transaction = 5;
 }
+
+message MoneyWithdraw {
+    string wallet = 1;
+}
