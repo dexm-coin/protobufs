@@ -7,18 +7,17 @@ message Transaction {
 
     uint64 amount = 4;
     uint32 gas = 5;
-    uint64 timestamp = 6;
 
-    bool contractCreation = 7;
-    string function = 8;
-    repeated uint64 args = 9;
-    bytes data = 10;
+    bool contractCreation = 6;
+    string function = 7;
+    repeated uint64 args = 8;
+    bytes data = 9;
     
-    bytes r = 11;
-    bytes s = 12;
+    bytes r = 10;
+    bytes s = 11;
 
-    bytes pubSchnorrKey = 13;
-    uint32 shard = 14;
+    bytes pubSchnorrKey = 12;
+    uint32 shard = 13;
 }
 
 message Block {
@@ -63,7 +62,6 @@ message Schnorr {
 
 message AccountState {
     uint64 balance = 1;
-    uint32 nonce = 2;
 }
 
 message ContractState {
