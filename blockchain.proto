@@ -107,6 +107,8 @@ message MerkleProof {
 
     Receipt receipt = 5;
     Transaction transaction = 6;
+
+    uint32 shard = 7;
 }
 
 message MoneyWithdraw {
