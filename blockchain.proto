@@ -17,7 +17,8 @@ message Transaction {
     bytes s = 11;
 
     bytes pubSchnorrKey = 12;
-    uint32 shard = 13;
+    bytes pubBlsKey = 13;
+    uint32 shard = 14;
 }
 
 message Block {
@@ -58,6 +59,12 @@ message signSchnorr {
 message Schnorr {
     bytes r = 1;
     string p = 2;
+}
+
+message Bls {
+    Block block = 1;
+    bytes signature = 2;
+    bytes pubKey = 3;
 }
 
 message AccountState {
