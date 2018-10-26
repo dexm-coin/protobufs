@@ -10,10 +10,11 @@ message Request {
     GET_CONTRACT_CODE = 5;
     GET_CONTRACT_STATE = 6;
     GET_INTERESTS = 7;
+    HASH_EXIST = 8;
   }
 
   MessageTypes type = 1;
-  uint64 index = 2;
+  Envelope data = 2;
 }
 
 message Envelope {
