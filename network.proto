@@ -31,6 +31,7 @@ message Envelope {
   bytes data = 2;
   uint32 shard = 3;
   Signature identity = 4;
+  uint32 TTL = 5;  
 }
 
 message Broadcast {
@@ -49,7 +50,6 @@ message Broadcast {
 
   BroadcastType type = 1;
   bytes data = 2;
-  uint32 TTL = 3;
 
   bytes address = 4;
   uint32 shardAddress = 5;
@@ -63,8 +63,6 @@ message Signature {
   bytes s = 3;
 
   bytes data = 4;
-
-  uint32 shard = 5;
 }
 
 message Interests {
