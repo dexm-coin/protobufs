@@ -15,7 +15,10 @@ message Request {
   }
 
   MessageTypes type = 1;
-  Envelope data = 2;
+  bytes data = 2;
+
+  bytes address = 4;
+  uint32 shardAddress = 5;
 }
 
 message Envelope {
