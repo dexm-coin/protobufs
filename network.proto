@@ -30,6 +30,7 @@ message Envelope {
   ContentType type = 1;
   bytes data = 2;
   uint32 shard = 3;
+  Signature identity = 4;
 }
 
 message Broadcast {
@@ -48,8 +49,10 @@ message Broadcast {
 
   BroadcastType type = 1;
   bytes data = 2;
-  Signature identity = 3;
-  uint32 TTL = 4;
+  uint32 TTL = 3;
+
+  bytes address = 4;
+  uint32 shardAddress = 5;
 }
 
 
