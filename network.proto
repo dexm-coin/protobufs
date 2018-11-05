@@ -70,18 +70,22 @@ message Signature {
 
 message Interests {
   repeated string keys = 1;
+
+  bytes address = 2;
+  uint32 shardAddress = 3;
 }
 
 message Peers {
   repeated string ip = 1;
+
+  bytes address = 2;
+  uint32 shardAddress = 3;
 }
 
 message PeersAndInterests {
   repeated string keys = 1;
   repeated string ips = 2;
-}
 
-message RandomMessage {
-  bytes pubkey = 1;
-  bytes data = 2;
+  bytes address = 3;
+  uint32 shardAddress = 4;
 }
