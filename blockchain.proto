@@ -92,10 +92,7 @@ message CasperVote {
 }
 
 message ValidatorWithdraw {
-    string publicKey = 1;
-
-    bytes r = 2;
-    bytes s = 3;
+    bytes publicKey = 1;
 }
 
 message Receipt {
