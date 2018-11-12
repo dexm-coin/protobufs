@@ -17,8 +17,7 @@ message Transaction {
     bytes s = 11;
 
     bytes pubSchnorrKey = 12;
-    bytes pubBlsKey = 13;
-    uint32 shard = 14;
+    uint32 shard = 13;
 }
 
 message Block {
@@ -28,10 +27,11 @@ message Block {
     string miner = 4;
 
     repeated Transaction transactions = 5;
+    repeated Receipt receiptsContracts = 6;
 
-    bytes merkleRootReceipt = 6;
+    bytes merkleRootReceipt = 7;
 
-    uint32 shard = 7;
+    uint32 shard = 8;
 }
 
 message MerkleRootsSigned {
